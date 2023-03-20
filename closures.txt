@@ -1,0 +1,16 @@
+const outfunc=(a)=>{
+  const b=20;
+    const innfunc=(c)=>{
+      const sum=a+b+c;
+      console.log(sum);
+      return sum;
+  }
+  return innfunc;
+}
+const res=outfunc(10);
+
+const sum=res(40);
+console.log(sum);
+//_____or________
+//const res=outfunc(10)(40); 
+//console.log(res);

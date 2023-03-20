@@ -1,0 +1,21 @@
+<script>
+function a() {
+  console.log('in func a');
+  debugger;
+  b();
+  console.log('in func a after');
+}
+function b() {
+  console.log('in func b');
+  debugger;
+c();
+console.log('in func b after');
+}
+function c() {
+  console.log('in func c');
+  debugger;
+console.log('in func c after');
+}
+a();
+
+</script>
