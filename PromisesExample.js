@@ -21,7 +21,7 @@ function job(data) {
   });
 }
 
-module.exports = job;
+//module.exports = job;
 
 
 // Let's do some practice with a simple exercice. You must modify the code below based on the following rules:
@@ -30,12 +30,29 @@ module.exports = job;
 // The promise must resolve itself 2 seconds after the call to job and must provide hello world in the data
 
 
-function job() {
+/* function job() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve("hello world");
     }, 2000);
   });
-}
+} */
 
-module.exports = job;
+//module.exports = job;
+
+//call 1 promise inside another
+
+let pr= new  Promise((resolve,reject)=>{
+        reject("hello");
+    })
+pr.then((result)=>{
+    console.log(result);
+    return new Promise((resolve,reject)=>{
+        reject(result + " Aaushi");
+    }).then((res)=>{
+        console.log(res);
+    })
+},(rejectres)=>{
+    console.log(rejectres);
+});
+pr();
