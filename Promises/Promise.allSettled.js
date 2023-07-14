@@ -9,12 +9,16 @@ let pr2 = new Promise((resolve, reject) => {
   resolve("resolve pr2");
 });
 
-Promise.all([rejectPr, pr1, pr2]).then(
+Promise.allSettled([rejectPr, pr1, pr2]).then(
   (resolve) => {
     console.log(resolve);
-  },
-  (reject) => {
-    console.log(reject);
   }
 );
-//console.log(all)
+//
+// o/p
+
+/* (3) [{…}, {…}, {…}]
+0:{status: 'rejected', reason: 'rejected'}
+1: {status: 'fulfilled', value: 'resolve pr1'}
+2: {status: 'fulfilled', value: 'resolve pr2'}
+*/
