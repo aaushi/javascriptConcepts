@@ -1,0 +1,1 @@
+//JavaScript does not support function overloading.
