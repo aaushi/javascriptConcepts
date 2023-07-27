@@ -6,10 +6,18 @@
     
     <!-- <link rel="stylesheet" href="src/style.css"> -->
   </head>
+  <script src="EventBubbling.js"></script>
   <body>
     
-    <button id="clickme">click me</button>
-    <script src="Promises/Promise.race.js"></script>
+    <!-- <button id="clickme">click me</button> -->
+    
+    <div id="grandParent" style="background-color: aqua; height: 200px ;width:200px;">
+      <div id="Parent" style="background-color: blue; height: 100px ;width:100px ;position:fixed">
+        <div id="Child" style="background-color: yellow; height: 80px ;width:80px ;position:fixed">
+          <button id="buttonClick" style="background-color: white; height: 50px ;width:50px ;position:fixed">Click</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
