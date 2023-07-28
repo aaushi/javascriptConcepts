@@ -8,27 +8,29 @@ divgp.addEventListener(
   (e) => {
     console.log("grandparent clicked");
   },
-  true
+  false
 );
 divp.addEventListener(
   "click",
   (e) => {
     console.log("parent clicked");
   },
-  true
+  false
 );
 divc.addEventListener(
   "click",
   (e) => {
     console.log("child clicked");
+    e.stopPropagation();
   },
-  true
+  false
 );
 divb.addEventListener(
   "click",
   (e) => {
     console.log("button clicked");
+    e.stopPropagation();
   },
-  true
+  false
 );
 console.log("heyyyy")}
