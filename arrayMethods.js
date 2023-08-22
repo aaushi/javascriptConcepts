@@ -44,6 +44,20 @@ const arrayForSplice = ["Banana", "Orange", "Apple", "Mango"];
 const afterSplice = arrayForSplice.splice(0, 2);
 console.log(afterSplice);
 console.log(arrayForSplice);
+
+arrayForSplice.splice(2, 2, "lemon", "kiwi");
+console.log(arrayForSplice);
+
+arrayForSplice.splice(2, 2, "plum", "litchi");
+console.log(arrayForSplice);
+
+arrayForSplice.splice(2, 0, "strawberry");
+console.log(arrayForSplice);
+
+arrayForSplice.splice(4);
+console.log(arrayForSplice);
+
+
 console.log("=========");
 const arrayForSlice = ["Banana", "Orange", "Apple", "Mango"];
 const afterSlice = arrayForSlice.slice(0, 2);
