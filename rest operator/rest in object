@@ -1,13 +1,9 @@
-
-
-const original = {firstname:"aa",
-lastname:"gupta"};
-log(original)
-function log({...obj}){
-    console.log(obj.firstname)
-    console.log(obj.lastname)
+const original = { firstname: "aa", lastname: "gupta" };
+console.log(original);
+function log( ...obj ) {
+  console.log(obj.firstname);
+  console.log(obj.lastname);
 }
-
 
 //********op******* */
 /* aa
