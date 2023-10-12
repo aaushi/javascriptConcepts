@@ -1,0 +1,13 @@
+
+let strings=["cbdddccccbbbad"]
+let set=new Set(strings[0].split(""))
+let potential=new Set(set)
+potential.add('j');
+console.log(set);
+console.log(potential);
+
+let newSet=new Set(strings[0].split(""));
+let copySet=newSet;
+copySet.add('p');
+console.log(newSet);
+console.log(copySet);

@@ -1,0 +1,39 @@
+
+let obj={a:1, b:
+                {
+                    c:2,
+                    d:3
+                    
+                }
+        }
+console.log("create shallow copy");
+let shallow={...obj};
+shallow.a=3;
+
+console.log(obj);
+console.log(shallow);
+
+shallow.b.c=6;
+
+console.log(obj);
+console.log(shallow);
+
+console.log("++++++++++++++");
+let obj2={a:1, b:
+                {
+                    c:2,
+                    d:3
+                    
+                }
+        }
+
+let deepCopy=JSON.parse(JSON.stringify(obj2));
+deepCopy.a=7
+
+console.log(obj2);
+console.log(deepCopy);
+
+deepCopy.b.c=9;
+
+console.log(obj2);
+console.log(deepCopy);
